@@ -13,30 +13,275 @@
         <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
         <!-- custom style -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- font awesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Syncopate:700" rel="stylesheet">
     </head>
 
     <body>
-        
-        <!-- top nav, desktop and tablet -->
 
-        <div class="w3-bar w3-theme">
-            <a href="#" class="w3-bar-item w3-button">Messina Soccer Club</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small">About</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small">Training</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small">Teams</a>
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="topNav()">&#9776;</a>
+        <!-- top nav, desktop and tablet -->
+        <div class="w3-top">
+            <div class="w3-bar w3-theme">
+                <a href="#" class="w3-bar-item w3-button">Crystal Geyser</a>
+                <a href="#about" class="w3-bar-item w3-button w3-hide-small">About</a>
+                <a href="#products" class="w3-bar-item w3-button w3-hide-small">Products</a>
+                <a href="#facilities" class="w3-bar-item w3-button w3-hide-small">Facilities</a>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="topNav()">&#9776;</a>
+            </div>
+            <div id="mobileNav" class="w3-bar-block w3-theme-l1 w3-hide w3-hide-large w3-hide-medium">
+                <a href="#about" class="w3-bar-item w3-button">About</a>
+                <a href="#products" class="w3-bar-item w3-button">Products</a>
+                <a href="#facilities" class="w3-bar-item w3-button">Facilities</a>
+            </div>
         </div>
-        
         <!-- top nav, mobile -->
 
-        <div id="mobileTopNav" class="w3-bar-block w3-theme-l1 w3-hide w3-hide-large w3-hide-medium">
-            <a href="#" class="w3-bar-item w3-button">About</a>
-            <a href="#" class="w3-bar-item w3-button">Training</a>
-            <a href="#" class="w3-bar-item w3-button">Teams</a>
+        <!-- Container (About Section) -->
+        <div class="w3-padding-64" id="about">
+
+            <div class="w3-row w3-container">
+                <h1>About</h1>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-third">
+                    <a href="javascript:void(0)" onclick="revealModal(1)">
+                        <div class="w3-card w3-hover-shadow">
+                            <div class="container w3-center w3-jumbo w3-text-theme2">
+                                <i class="fa fa-book"></i>
+                            </div>
+                            <div class="w3-container w3-center w3-theme2">
+                                <h3>Origin</h3>  
+                            </div>
+                        </div>
+
+
+                    </a>
+
+                </div>
+
+                <div class="w3-third">
+                    <a href="javascript:void(0)" onclick="revealModal(2)">
+                        <div class="w3-card">
+                            <div class="container w3-center w3-jumbo w3-text-theme2">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            <div class="w3-container w3-center w3-theme2">
+                                <h3>Locations</h3>  
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="w3-third">
+                    <a href="javascript:void(0)" onclick="revealModal(3)">
+                        <div class="w3-card">
+                            <div class="container w3-center w3-jumbo w3-text-theme2">
+                                <i class="fa fa-phone-square"></i>
+                            </div>
+                            <div class="w3-container w3-center w3-theme2">
+                                <h3>Contact</h3>  
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
         </div>
-        
-        
+
+        <!-- Second Parallax Image with Logo Text -->
+        <div class="bgimg-2 w3-display-container w3-opacity-min" id="home">
+        </div>
+
+
+        <!-- Container (Product Section) -->
+        <section class="w3-padding-64" id="products" style="height: 100%;">
+
+            <div class="w3-row w3-container">
+                <h1>Products</h1>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-half">
+                    <div class="w3-card">
+                        <img src="img/Product%20Picture.jpg" class="w3-image" alt="Soccer Team Training">
+                    </div>
+                </div>
+                <div class="w3-half">
+
+                    <button onclick="accordion('Origin')" class="w3-button w3-block w3-left-align w3-theme w3-border">
+                        Origin of Water</button>
+
+                    <div id="Origin" class="w3-container w3-hide">
+                        <p>Alpine Spring Water ® is the only major U.S. bottled water that's captured directly at authentic natural springs, while other major bottled water brands are actually selling filtered municipal water. Otherwise known as filtered tap water.</p>
+                    </div>
+
+                    <button onclick="accordion('Obtain')" class="w3-button w3-block w3-left-align w3-theme w3-border">
+                        How We Obtain Our Water</button>
+
+                    <div id="Obtain" class="w3-container w3-hide">
+                        <p> Crystal Geyser currently has 7 different springs were we bottle our water directly from the source! Our 7 locations are Mount Shasta, California; Olancha, California; Norman, Arkansas; Benton, Tennessee; Salem, South Carolina; Moultonborough, New Hampshire; and Johnstown, New York.</p>
+                    </div>
+
+                    <button onclick="accordion('Made')" class="w3-button w3-block w3-left-align w3-theme w3-border">
+                        How It Is Made</button>
+
+                    <div id="Made" class="w3-container w3-hide">
+                        <p>Crystal Geyser Water Company is a private company based in California that produces sparkling mineral water and other beverage products. It is a wholly owned subsidiary of Japanese pharmaceutical company, Otsuka Holdings.</p>
+                    </div>
+
+                    <button onclick="accordion('Purchase')" class="w3-button w3-block w3-left-align w3-theme w3-border">
+                        How To Purchase</button>
+
+                    <div id="Purchase" class="w3-container w3-hide">
+                        <p>You can purchase Crystal Geyser water in a few places. The first being to go onto the Crystal Geyser <a style="text-decoration: underline; color: blue;" href="http://www.crystalgeyserasw.com/" target="_blank">website</a> and make your purchase there and have it sent to your house/business location. The other place you can purchase crystal geyser water is off amazon.</p>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- Second Parallax Image with Logo Text -->
+        <div class="bgimg-2 w3-display-container w3-opacity-min" id="home">
+        </div>
+
+
+        <!-- Container (Facility Section) -->
+        <section class="w3-padding-64" id="facilities">
+
+            <div class="w3-row w3-container">
+                <h1>Facilities</h1>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-third">
+                    <div class="w3-card">
+                        <img src="img/CGFactory.jpg" class="w3-image" alt="Soccer Team Training">
+                    </div>
+                </div>
+                <div class="w3-rest">
+
+                    <div class="w3-bar w3-theme">
+                        <button class="w3-bar-item w3-button" onclick="openTab('Mount Shasta, California')">Shasta</button>
+                        <button class="w3-bar-item w3-button" onclick="openTab('Olancha, California')">Olancha</button>
+                        <button class="w3-bar-item w3-button" onclick="openTab('Norman, Arkansas')">Norman</button>
+                        <button class="w3-bar-item w3-button" onclick="openTab('Benton, Tennessee')">Benton</button>
+                        <button class="w3-bar-item w3-button" onclick="openTab('Salem, South Carolina')">Salem</button>
+                        <button class="w3-bar-item w3-button" onclick="openTab('Moultonborough, New Hampshire')">Moultonborough</button>
+                        <button class="w3-bar-item w3-button" onclick="openTab('Johnstown, New York')">Johnstown</button>
+                        
+                    </div>
+
+                    <div id="Mount Shasta, California" class="tab">
+                        <div class="w3-container">
+                            <h2>Mount Shasta</h2>
+                            <p>This fresh spring is located in Mount Shasta, California</p>
+                        </div>
+
+                    </div>
+
+                    <div id="Olancha, California" class="tab" style="display: none">
+                        <div class="w3-container">
+                            <h2>Olancha</h2>
+                            <p>This fresh spring is located in Olancha, California</p>
+                        </div>
+
+                    </div>
+
+                    <div id="Norman, Arkansas" class="tab" style="display: none">
+                        <div class="w3-container">
+                            <h2>Norman</h2>
+                            <p>This fresh spring is located in Norman, Arkansas</p>
+                        </div>
+
+                    </div>
+                    
+                    <div id="Benton, Tennessee" class="tab" style="display: none">
+                        <div class="w3-container">
+                            <h2>Benton</h2>
+                            <p>This fresh spring is located in Benton, Tennessee</p>
+                        </div>
+
+                    </div>
+                    
+                    <div id="Salem, South Carolina" class="tab" style="display: none">
+                        <div class="w3-container">
+                            <h2>Salem</h2>
+                            <p>This fresh spring is located in Salem, South Carolina</p>
+                        </div>
+
+                    </div>
+                    
+                    <div id="Moultonborough, New Hampshire" class="tab" style="display: none">
+                        <div class="w3-container">
+                            <h2>Moultonborough</h2>
+                            <p>This fresh spring is located in Moultonborough, New Hampshire</p>
+                        </div>
+
+                    </div>
+                    
+                    <div id="Johnstown, New York" class="tab" style="display: none">
+                        <div class="w3-container">
+                            <h2>Johnstown</h2>
+                            <p>This fresh spring is located in Johnstown, New York</p>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+        <div id="modal1" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(1)">&times;</span>
+                <p>We are wholly owned subsidiary of Japanese pharmaceutical company, Otsuka Holdings. The company has planned to bottle water from an aquifer in Mount Shasta, California, but many local residents have criticized the plan. Another affiliate of Otsuka Holdings, CG Roxane, LLC, produces Crystal Geyser Alpine Spring Water.</p>
+            </div>
+
+        </div>
+
+        <div id="modal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(2)">&times;</span>
+                <p>Our 7 locations are Mount Shasta, California; Olancha, California; Norman, Arkansas; Benton, Tennessee; Salem, South Carolina; Moultonborough, New Hampshire; and Johnstown, New York.</p>
+            </div>
+
+        </div>
+
+        <div id="modal3" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(3)">&times;</span>
+                <p>You can contact crystal geyser directly through their website by clicking <a style="text-decoration: underline; color: blue;" href="http://www.crystalgeyserasw.com/" target="_blank">Here</a></p>
+            </div>
+
+        </div>
+        <!-- Javascript -->
+
         <script src="js/topNav.js"></script>
+        <script src="js/accordion.js"></script>
+        <script src="js/tabs.js"></script>
+        <script src="js/slideshow.js"></script>
+        <script src="js/modal.js"></script>
+
     </body>
 
 </html>
